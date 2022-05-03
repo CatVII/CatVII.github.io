@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>C语言学习小记 | CatVII&#39;s Blog</title>
+<title>Learn | CatVII&#39;s Blog</title>
 
 <link rel="shortcut icon" href="https://catvii.github.io//favicon.ico?v=1651572061281">
 
@@ -25,11 +25,11 @@
 
 
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
-    <nav class="navbar navbar-expand-lg">
+    <div class="main-content">
+        <nav class="navbar navbar-expand-lg">
     <a class="navbar-brand" href="/">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -97,96 +97,45 @@
     }
 </script>
 
-    <div class="post-container">
-        <div class="post-detail gt-bg-theme-color-second">
-            <article class="gt-post-content">
-                <h2 class="post-title">
-                    C语言学习小记
-                </h2>
-                <div class="post-info">
-                    <time class="post-time gt-c-content-color-first">
-                        · 2022-05-02 ·
-                    </time>
-                    
-                        <a href="https://catvii.github.io/tag/learn/" class="post-tags">
-                            # Learn
-                        </a>
-                    
-                </div>
-                <div class="post-content">
-                    <h1 id="static">STATIC</h1>
-<p>static 修饰变量和函数</p>
-<ol>
-<li>修饰局部变量 - 局部静态变量</li>
-</ol>
-<p>延长局部变量的生命周期<br>
-离开作用域不销毁</p>
-<blockquote>
-<p>1）内存中的位置：静态存储区<br>
-2）初始化：未经初始化的局部静态变量会被程序自动初始化为0（自动对象的值是任意的，除非他被显示初始化）<br>
-3）作用域：作用域仍为局部作用域，当定义它的函数或者语句块结束的时候，作用域随之结束。<br>
-注：当static用来修饰局部变量的时候，它就改变了局部变量的存储位置，从原来的栈中存放改为静态存储区。但是局部静态变量在离开作用域之后，并没有被销毁，而是仍然驻留在内存当中，直到程序结束，只不过我们不能再对他进行访问。</p>
-</blockquote>
-<p>e.g.</p>
-<pre><code class="language-C">void function()
-{
-    static int a = 1;
-    a++;
-    printf(&quot;a = %d&quot;,a);
-}
-int main()
-{
-    int i = 1;
-    while (i &lt; 5)
-    {
-        function();
-        i++;
-    }
-    return 0;
-}
-</code></pre>
-<p>执行结果</p>
-<pre><code class="language-text">a = 2
-a = 3
-a = 4
-a = 5
-</code></pre>
-<ol start="2">
-<li>修饰全局变量 - 全局静态变量</li>
-</ol>
-<p>改变全局变量的作用域</p>
-<blockquote>
-<p>1）内存中的位置：静态存储区（静态存储区在整个程序运行期间都存在）<br>
-2）初始化：未经初始化的全局静态变量会被程序自动初始化为0（自动对象的值是任意的，除非他被显式初始化）<br>
-3）作用域：全局静态变量在声明他的文件<code>act.从定义之处开始到文件结尾</code>之外是不可见的<br>
-定义全局静态变量的好处：<br>
-&lt;1&gt; 不会被其他文件所访问，修改<br>
-&lt;2&gt; 其他文件中可以使用相同名字的变量，不会发生冲突</p>
-</blockquote>
-<ol start="3">
-<li>修饰函数</li>
-</ol>
-<p>更改函数的链接属性 -- 外部链接属性 -&gt; 内部链接属性</p>
-<p>注： <code>extern</code>  声明外部符号</p>
-
-                </div>
-            </article>
+        <div class="current-tag-container">
+            <h2 class="title gt-c-content-color-first">
+                #Learn
+            </h2>
         </div>
-
+        <div class="post-list-container">
+    <div class="post-inner">
         
-            <div class="next-post">
-                <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://catvii.github.io/post/poem1/" class="post-title gt-a-link">
-                     POEM1
-                </a>
+            <div class="post gt-bg-theme-color-second">
+                <div class="post-left">
+                    <div>
+                        
+                        <a href="https://catvii.github.io/post/c-yu-yan-xue-xi-xiao-ji/">
+                            <span class="post-title gt-c-content-color-first">C语言学习小记</span>
+                        </a>
+                    </div>
+                    <div class="gt-post-content post-abstract gt-c-content-color-second">
+                        
+                    </div>
+                    <div class="post-info">
+                        <time class="post-time gt-c-content-color-first">
+                            发布于 · 2022-05-02 ·
+                        </time>
+                        
+                            <a href="https://catvii.github.io/tag/learn/" class="post-tag">
+                                # Learn
+                            </a>
+                        
+                    </div>
+                </div>
+                
             </div>
         
-
-        
-
-        
-
-        
+    </div>
+</div>
+        <div class="pagination-container">
+    
+    
+</div>
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">Stay hungry, stay foolish.</div>
